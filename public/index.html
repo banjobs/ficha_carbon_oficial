@@ -5,71 +5,74 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ficha Carbon (FCHA) — Token de Carbono na Polygon</title>
   <style>
-    body { margin:0; font-family: 'Arial', sans-serif; background: linear-gradient(135deg, #001122, #003300); color: white; text-align: center; overflow-x: hidden; }
-    header { padding: 40px 20px; background: rgba(0,17,34,0.8); }
-    .logo { width: 150px; height: 150px; border-radius: 50%; margin: 20px auto; border: 3px solid #00ff88; }
+    body { margin: 0; font-family: 'Arial', sans-serif; background: linear-gradient(135deg, #001122, #003300); color: white; text-align: center; overflow-x: hidden; }
+    header { padding: 40px 20px; background: rgba(0, 17, 34, 0.8); }
+    .logo { width: 150px; height: 150px; border-radius: 50%; margin: 20px auto; border: 3px solid #00ff88; box-shadow: 0 0 20px #00ff88; }
     h1 { font-size: 64px; color: #00ff88; margin: 20px 0; text-shadow: 0 0 10px #00ff88; }
     .hero p { font-size: 24px; max-width: 800px; margin: 0 auto 40px; color: #a0a0a0; }
-    .how-to { max-width: 800px; margin: 60px auto; text-align: left; }
-    .how-to h2 { font-size: 36px; color: #00ff88; text-align: center; }
-    .how-to ol { font-size: 18px; line-height: 1.6; }
-    .how-to li { margin: 20px 0; }
-    .tokenomics { background: rgba(0,51,0,0.5); padding: 40px; margin: 60px auto; max-width: 800px; border-radius: 20px; border: 2px solid #00ff88; }
-    .tokenomics h2 { font-size: 36px; color: #00ff88; }
-    .tokenomics ul { font-size: 20px; list-style: none; padding: 0; }
-    .tokenomics li { margin: 15px 0; }
-    .roadmap { max-width: 800px; margin: 60px auto; }
-    .roadmap h2 { font-size: 36px; color: #00ff88; }
-    .roadmap ol { font-size: 18px; line-height: 1.6; }
-    .roadmap li { margin: 20px 0; background: rgba(0,255,136,0.1); padding: 15px; border-radius: 10px; }
+    .data-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; max-width: 800px; margin: 40px auto; }
+    .data-card { background: rgba(0, 51, 0, 0.5); padding: 20px; border-radius: 15px; border: 1px solid #00ff88; }
+    .data-card h3 { margin: 0 0 10px; color: #00ff88; font-size: 16px; }
+    .data-card .num { font-size: 32px; font-weight: bold; color: #39ff14; }
     .cta { margin: 60px 0; }
     .cta button { background: #00ff88; color: black; padding: 15px 40px; border: none; border-radius: 30px; font-size: 22px; cursor: pointer; margin: 10px; transition: transform 0.3s; }
     .cta button:hover { transform: scale(1.05); }
-    footer { padding: 40px 20px; background: rgba(0,17,34,0.8); font-size: 14px; }
+    .social { display: flex; justify-content: center; gap: 20px; margin: 40px 0; flex-wrap: wrap; }
+    .social a { color: #00ff88; text-decoration: none; font-size: 18px; }
+    footer { padding: 40px 20px; background: rgba(0, 17, 34, 0.8); font-size: 14px; }
     footer a { color: #00ff88; }
-    @media (max-width: 768px) { h1 { font-size: 48px; } .how-to, .tokenomics, .roadmap { text-align: center; } }
+    @media (max-width: 768px) { h1 { font-size: 48px; } .data-grid { grid-template-columns: 1fr; } .social { flex-direction: column; } }
   </style>
 </head>
 <body>
   <header>
-    <img src="https://i.imgur.com/Jt9vP8K.svg" alt="Logo Ficha Carbon" style="width: 150px; height: 150px; border-radius: 50%; margin: 20px auto;">
+    <img src="https://i.imgur.com/Jt9vP8K.svg" alt="Logo Ficha Carbon" style="width: 150px; height: 150px; border-radius: 50%; margin: 20px auto; border: 3px solid #00ff88; box-shadow: 0 0 20px #00ff88;">
     <h1>Ficha Carbon (FCHA)</h1>
-    <p style="font-size: 24px; max-width: 800px; margin: 0 auto 40px; color: #a0a0a0;">O token de carbono comunitário na Polygon — queime FCHA e equilibre os 4 elementos do planeta</p>
+    <p style="font-size: 24px; max-width: 800px; margin: 0 auto 40px; color: #a0a0a0;">O token que aposenta creditos de carbono na Polygon — queime FCHA e e salve o futuro do planeta</p>
   </header>
 
-  <section class="how-to">
-    <h2>Como Adicionar LP e Ganhar Bônus</h2>
-    <ol>
-      <li>Crie uma wallet: Baixe MetaMask ou Trust Wallet.</li>
-      <li>Compre POL: Adicione POL na Polygon (via Binance ou Mercado Bitcoin).</li>
-      <li>Vá ao QuickSwap: Clique no botão abaixo pra adicionar liquidez.</li>
-      <li>Adicione POL + FCHA: Ganhe +10% bônus automático em FCHA!</li>
-    </ol>
-  </section>
-
-  <section class="tokenomics">
-    <h2>Tokenomics</h2>
-    <ul>
-      <li>Supply Total: 625.6B FCHA (deflacionário)</li>
-      <li>Taxas: 10% compra | 12% venda (40% Burn | 30% Reflexão | 20% Carbono Real | 10% Referral)</li>
-      <li>Bônus LP: +10% FCHA grátis ao adicionar liquidez</li>
-      <li>560B Locked: 8 anos vesting linear (compromisso eterno)</li>
-    </ul>
-  </section>
-
-  <section class="roadmap">
-    <h2>Roadmap</h2>
-    <ol>
-      <li>Phase 1: Launch comunitário + pool QuickSwap + site ao vivo</li>
-      <li>Phase 2: Locks 500B + 60B + suavizar taxas pra 8/10%</li>
-      <li>Phase 3: Primeira aposentadoria de carbono real + listagem CoinGecko</li>
-      <li>Phase 4: Contrato automático de offsets + parcerias ESG</li>
-    </ol>
+  <section style="max-width: 800px; margin: 40px auto;">
+    <h2 style="font-size: 36px; color: #00ff88; text-align: center;">Dados em Tempo Real do Ecossistema</h2>
+    <div class="data-grid">
+      <div class="data-card">
+        <h3>CO₂ Aposentado</h3>
+        <div class="num" id="carbon">Carregando...</div>
+      </div>
+      <div class="data-card">
+        <h3>Preço Atual</h3>
+        <div class="num" id="price">Carregando...</div>
+      </div>
+      <div class="data-card">
+        <h3>Liquidez</h3>
+        <div class="num" id="liquidity">Carregando...</div>
+      </div>
+      <div class="data-card">
+        <h3>Volume 24h</h3>
+        <div class="num" id="volume24h">Carregando...</div>
+      </div>
+      <div class="data-card">
+        <h3>Market Cap</h3>
+        <div class="num" id="mc">Carregando...</div>
+      </div>
+      <div class="data-card">
+        <h3>Transações 24h</h3>
+        <div class="num" id="txs">Carregando...</div>
+      </div>
+    </div>
   </section>
 
   <section class="cta">
     <button onclick="window.open('https://quickswap.exchange/#/pool?currency0=0x338aeFA4F10aDd5A58D83F62a350520487C8e4b3&currency1=POL', '_blank')">Adicionar LP + Bônus 10%</button>
     <button onclick="window.open('https://t.me/fichacarbon_polygon', '_blank')">Junte-se ao Telegram</button>
+  </section>
+
+  <section style="max-width: 800px; margin: 60px auto;">
+    <div class="social">
+      <a href="https://t.me/fichacarbon_polygon" target="_blank">Telegram</a>
+      <a href="https://twitter.com/fichacarbon" target="_blank">Twitter / X</a>
+      <a href="https://dexscreener.com/polygon/0x338aefa4f10add5a58d83f62a350520487c8e4b3" target="_blank">DexScreener</a>
+      <a href="https://polygonscan.com/address/0x338aeFA4F10aDd5A58D83F62a350520487C8e4b3" target="_blank">PolygonScan</a>
+    </div>
   </section>
 
   <footer>
@@ -79,20 +82,40 @@
 
   <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
   <script>
+    // 1. CO₂ do contrato
     const CONTRACT_ADDRESS = "0x338aeFA4F10aDd5A58D83F62a350520487C8e4b3";
     const ABI = [{"inputs":[],"name":"totalCarbonRetired","outputs":[{"type":"uint256"}],"stateMutability":"view","type":"function"}];
-
-    async function update() {
+    async function updateCarbon() {
       try {
         const web3 = new Web3("https://polygon-rpc.com");
         const contract = new web3.eth.Contract(ABI, CONTRACT_ADDRESS);
         const retired = await contract.methods.totalCarbonRetired().call();
         const tons = retired / 1e18;
-        // Adicione elementos IDs se quiser contador (ex: document.getElementById("carbon").innerText = tons.toLocaleString();)
-      } catch (e) { console.log("Atualizando..."); }
+        document.getElementById("carbon").innerText = tons.toLocaleString();
+      } catch (e) { console.log("Carbon update error:", e); }
     }
-    update();
-    setInterval(update, 30000);
+
+    // 2. DexScreener dados
+    const PAIR_ADDRESS = "0x143eec96cfec3a13be076752ef8925d6217d4f13"; // Seu pool FCHA/POL
+    async function updateDexData() {
+      try {
+        const response = await fetch(`https://api.dexscreener.com/latest/dex/pairs/polygon/${PAIR_ADDRESS}`);
+        const data = await response.json();
+        const pair = data.pair;
+        if (pair) {
+          document.getElementById("price").innerText = "$" + Number(pair.priceUsd).toFixed(10);
+          document.getElementById("liquidity").innerText = "$" + Number(pair.liquidity.usd).toLocaleString();
+          document.getElementById("volume24h").innerText = "$" + Number(pair.volume.h24).toLocaleString();
+          document.getElementById("mc").innerText = pair.fdv ? "$" + Number(pair.fdv).toLocaleString() : "N/A";
+          document.getElementById("txs").innerText = (pair.txns.h24.buys + pair.txns.h24.sells).toLocaleString();
+        }
+      } catch (e) { console.log("DexScreener error:", e); }
+    }
+
+    // Atualiza tudo
+    updateCarbon();
+    updateDexData();
+    setInterval(() => { updateCarbon(); updateDexData(); }, 30000);
   </script>
 </body>
 </html>
