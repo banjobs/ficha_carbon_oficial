@@ -141,7 +141,7 @@
     <div class="social">
       <a href="https://t.me/fichacarbon_polygon" target="_blank">Telegram</a>
       <a href="https://twitter.com/fichacarbon" target="_blank">Twitter / X</a>
-      <a href="https://dexscreener.com/polygon/0x338aefa4f10add5a58d83f62a350520487c8e4b3" target="_blank">DexScreener</a>
+      <a href="https://dexscreener.com/polygon/0x143EEc96CFEc3a13bE076752EF8925D6217D4F13" target="_blank">DexScreener</a>
       <a href="https://polygonscan.com/address/0x338aeFA4F10aDd5A58D83F62a350520487C8e4b3" target="_blank">PolygonScan</a>
     </div>
   </section>
@@ -165,13 +165,13 @@
       } catch (e) { console.log("Carbon update error:", e); }
     }
 
-    const PAIR_ADDRESS = "0x143eec96cfec3a13be076752ef8925d6217d4f13";
+    // Endereço do par FCHA/POL corrigido
+    const PAIR_ADDRESS = "0x143EEc96CFEc3a13bE076752EF8925D6217D4F13";
     async function updateDexData() {
       try {
         const response = await fetch(`https://api.dexscreener.com/latest/dex/pairs/polygon/${PAIR_ADDRESS}`);
         const data = await response.json();
+        console.log("Dex data:", data);
         const pair = data.pair;
         if (pair) {
-          document.getElementById("price").innerText = "$" + Number(pair.priceUsd).toFixed(10);
-          document.getElementById("liquidity").innerText = "$" + Number(pair.liquidity.usd).toLocaleString();
-          document.get
+          document.getElementById("price").innerText = "$" + Number(pair.priceUsd).to
