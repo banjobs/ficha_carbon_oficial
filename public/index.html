@@ -3,69 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ficha Carbon (FCHA) — Salve os 4 Elementos</title>
+  <title>Ficha Carbon (FCHA) — Equilíbrio dos 4 Elementos</title>
   <style>
-    body { margin:0; font-family: 'Segoe UI', sans-serif; background:#000; color:white; overflow-x:hidden; }
-    
-    /* FAIXA LATERAL DIREITA – 4 ELEMENTOS */
-    .sidebar {
-      position:fixed; right:0; top:0; width:480px; height:100vh;
-      background:url('https://i.imgur.com/4elements-ficha-carbon.jpg') center/cover no-repeat;
-      z-index:1; box-shadow: -15px 0 40px rgba(0,0,0,0.9);
-    }
-    
-    .main { margin-right:500px; padding:50px 40px; min-height:100vh; background:rgba(0,8,0,0.97); z-index:2; position:relative; }
-    .logo { width:240px; border:6px solid #00ff88; border-radius:50%; box-shadow:0 0 40px #00ff8866; }
-    h1 { font-size:58px; margin:20px 0 35px; color:#39ff14; text-shadow:0 0 20px #00ff88; }
-    .eco-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:25px; margin:50px 0; }
-    .eco-card { background:rgba(0,255,136,0.12); border:2px solid #00ff88; padding:30px; border-radius:25px; text-align:center; backdrop-filter:blur(8px); }
-    .eco-card h3 { margin:0 0 12px; color:#00ff88; font-size:19px; }
-    .eco-card .num { font-size:56px; font-weight:bold; color:#39ff14; text-shadow:0 0 15px #00ff88; }
-    .social { display:flex; justify-content:center; flex-wrap:wrap; gap:25px; margin:60px 0; }
-    .social a { background:#00ff8833; padding:18px 40px; border-radius:50px; font-size:20px; color:white; text-decoration:none; border:3px solid #00ff88; transition:0.4s; }
-    .social a:hover { background:#00ff88; color:black; transform:scale(1.12); }
-    @media (max-width: 1200px) { .sidebar { width:380px; } .main { margin-right:400px; } }
-    @media (max-width: 900px) { .sidebar { position:relative; height:60vh; width:100%; } .main { margin-right:0; } }
+    body{margin:0;font-family:'Segoe UI',sans-serif;background:#000;color:white;overflow-x:hidden}
+    .sidebar{position:fixed;right:0;top:0;width:480px;height:100vh;background:url('https://i.imgur.com/4elements-ficha-carbon.jpg')center/cover no-repeat;z-index:1;box-shadow:-15px 0 40px rgba(0,0,0,0.9)}
+    .main{margin-right:500px;padding:60px 40px;min-height:100vh;background:rgba(0,8,0,0.97);z-index:2;position:relative}
+    .logo{width:240px;border:6px solid #00ff88;border-radius:50%;box-shadow:0 0 40px #00ff8866}
+    h1{font-size:62px;margin:20px 0 40px;color:#39ff14;text-shadow:0 0 20px #00ff88}
+    .eco-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px;margin:60px 0}
+    .eco-card{background:rgba(0,255,136,0.12);border:2px solid #00ff88;padding:35px;border-radius:25px;text-align:center;backdrop-filter:blur(8px)}
+    .eco-card h3{margin:0 0 15px;color:#00ff88;font-size:20px}
+    .eco-card .num{font-size:60px;font-weight:bold;color:#39ff14;text-shadow:0 0 15px #00ff88}
+    .social{display:flex;justify-content:center;flex-wrap:wrap;gap:30px;margin:80px 0}
+    .social a{background:#00ff8833;padding:20px 45px;border-radius:50px;font-size:22px;color:white;text-decoration:none;border:3px solid #00ff88;transition:0.4s}
+    .social a:hover{background:#00ff88;color:black;transform:scale(1.12)}
+    @media(max-width:1200px){.sidebar{width:380px}.main{margin-right:400px}}
+    @media(max-width:900px){.sidebar{position:relative;height:60vh;width:100%}.main{margin-right:0}}
   </style>
 </head>
 <body>
-
-  <!-- FAIXA DIREITA – 4 ELEMENTOS (Fogo, Água, Terra, Ar) -->
   <div class="sidebar"></div>
-
   <div class="main">
     <center>
       <img src="https://i.imgur.com/Jt9vP8K.svg" class="logo" alt="Ficha Carbon">
       <h1>Ficha Carbon (FCHA)</h1>
-      <p style="font-size:24px; color:#00ff88; max-width:800px; margin:0 auto 40px;">
+      <p style="font-size:26px;color:#00ff88;max-width:900px;margin:0 auto 50px">
         Token de carbono comunitário — cada queima equilibra os 4 elementos do planeta
       </p>
     </center>
 
-    <!-- DADOS DO ECOSSISTEMA EM TEMPO REAL -->
     <div class="eco-grid">
-      <div class="eco-card">
-        <h3>CO₂ Aposentado</h3>
-        <div class="num" id="carbon">0</div>
-        <small>toneladas</small>
-      </div>
-      <div class="eco-card">
-        <h3>FCHA Queimados</h3>
-        <div class="num" id="burned">0</div>
-        <small>tokens</small>
-      </div>
-      <div class="eco-card">
-        <h3>Liquidez no Pool</h3>
-        <div class="num" id="liquidity">87</div>
-        <small>POL</small>
-      </div>
-      <div class="eco-card">
-        <h3>Transações 24h</h3>
-        <div class="num" id="txs">0</div>
-      </div>
+      <div class="eco-card"><h3>CO₂ Aposentado</h3><div class="num" id="carbon">0</div><small>toneladas</small></div>
+      <div class="eco-card"><h3>FCHA Queimados</h3><div class="num" id="burned">0</div><small>tokens</small></div>
+      <div class="eco-card"><h3>Liquidez no Pool</h3><div class="num" id="liquidity">87</div><small>POL</small></div>
+      <div class="eco-card"><h3>Transações 24h</h3><div class="num" id="txs">0</div></div>
     </div>
 
-    <!-- REDES SOCIAIS -->
     <div class="social">
       <a href="https://t.me/fichacarbon_polygon" target="_blank">Telegram</a>
       <a href="https://twitter.com/fichacarbon" target="_blank">Twitter / X</a>
@@ -73,25 +46,17 @@
       <a href="https://quickswap.exchange/#/swap?outputCurrency=0x338aeFA4F10aDd5A58D83F62a350520487C8e4b3" target="_blank">Comprar FCHA</a>
     </div>
 
-    <center style="margin-top:80px; opacity:0.7;">
-      <small>Contrato: <a href="https://polygonscan.com/address/0x338aeFA4F10aDd5A58D83F62a350520487C8e4b3" style="color:#00ff88;">0x338aeF...8e4b3</a></small>
+    <center style="margin-top:100px;opacity:0.7">
+      <small>Contrato: <a href="https://polygonscan.com/address/0x338aeFA4F10aDd5A58D83F62a350520487C8e4b3" style="color:#00ff88">0x338aeF...8e4b3</a></small>
     </center>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
   <script>
-    const addr = "0x338aeFA4F10aDd5A58D83F62a350520487C8e4b3";
-    const abi = [{"inputs":[],"name":"totalCarbonRetired","outputs":[{"type":"uint256"}],"stateMutability":"view","type":"function"}];
-    async function update() {
-      try {
-        const web3 = new Web3("https://polygon-rpc.com");
-        const contract = new web3.eth.Contract(abi, addr);
-        const retired = await contract.methods.totalCarbonRetired().call();
-        const tons = Number(retired) / 1e18;
-        document.getElementById("carbon").innerText = tons.toLocaleString('pt-BR', {maximumFractionDigits: 0});
-      } catch(e) {}
-    }
-    update(); setInterval(update, 30000);
+    const addr="0x338aeFA4F10aDd5A58D83F62a350520487C8e4b3";
+    const abi=[{"inputs":[],"name":"totalCarbonRetired","outputs":[{"type":"uint256"}],"stateMutability":"view","type":"function"}];
+    async function update(){try{const web3=new Web3("https://polygon-rpc.com");const c=new web3.eth.Contract(abi,addr);const r=await c.methods.totalCarbonRetired().call();const t=Number(r)/1e18;document.getElementById("carbon").innerText=t.toLocaleString('pt-BR',{maximumFractionDigits:0})}catch(e){}}
+    update();setInterval(update,30000);
   </script>
 </body>
 </html>
